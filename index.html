@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Raquel &amp; Jordan – 16 de janeiro de 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#8ec9ee;--blue-d:#4f9fcf;--bg:#fff;--soft:#f3f6f8;--line:#e2e8ec;--txt:#5f6b73;--head:#3c464d;--card:#fff;
+--serif:'Cormorant Garamond',Georgia,serif;--sans:'Inter',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171b1e;--soft:#20262a;--line:#313a40;--txt:#b5c0c7;--head:#eef3f6;--card:#1d2327;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171b1e;--soft:#20262a;--line:#313a40;--txt:#b5c0c7;--head:#eef3f6;--card:#1d2327;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:300 16px/1.65 var(--sans)}
+h1,h2,h3{font-family:var(--serif);color:var(--head);font-weight:500;margin:0}
+h2{font-size:2.2rem;text-align:center;margin-bottom:.4rem}
+.sub{text-align:center;margin:0 auto 2rem;max-width:34rem}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:calc(env(safe-area-inset-top,0px) + 8px) 12px 8px;display:flex;align-items:center;gap:4px;overflow-x:auto}
+nav a{color:var(--txt);text-decoration:none;font-size:.85rem;padding:6px 12px;border-radius:99px;white-space:nowrap}
+nav a.on{background:var(--blue);color:#fff}
+nav .logo{font-family:var(--serif);font-size:1.25rem;color:var(--head);margin-right:auto;padding-right:10px}
+main{padding-top:calc(env(safe-area-inset-top,0px) + 60px);min-height:100vh}
+section{display:none;padding:2.5rem 1.2rem 4rem;max-width:960px;margin:0 auto;animation:f .4s}
+section.on{display:block}
+@keyframes f{from{opacity:0;transform:translateY(8px)}to{opacity:1}}
+.hero{text-align:center;padding-top:3rem}
+.hero small{letter-spacing:.3em;text-transform:uppercase;font-size:.75rem;color:var(--blue-d)}
+.hero h1{font-size:clamp(3rem,13vw,6rem);line-height:1.05;margin:.6rem 0}
+.hero h1 i{color:var(--blue-d);font-weight:400}
+.date{font-family:var(--serif);font-size:1.4rem;color:var(--head)}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:440px;margin:2rem auto}
+.cd div{background:var(--soft);border-radius:14px;padding:14px 4px}
+.cd b{display:block;font:500 2rem var(--serif);color:var(--head)}
+.cd span{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase}
+.btn{display:inline-block;background:var(--blue);color:#fff;border:0;border-radius:99px;padding:12px 26px;font:500 .95rem var(--sans);cursor:pointer;text-decoration:none;transition:.2s}
+.btn:hover{background:var(--blue-d)}
+.btn.ghost{background:transparent;color:var(--blue-d);border:1px solid var(--blue)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.4rem;margin:1.2rem auto;max-width:520px}
+.notice{display:grid;gap:12px;margin-top:2rem;text-align:left}
+@media(min-width:640px){.notice{grid-template-columns:1fr 1fr}.notice .card{max-width:none;margin:0}}
+.notice h3{font-size:1.3rem;margin-bottom:.3rem}
+.center{text-align:center}
+.gifts{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+@media(min-width:700px){.gifts{grid-template-columns:repeat(3,1fr)}}
+.gift{background:var(--soft);border:1px solid transparent;border-radius:18px;padding:1.4rem 1rem;text-align:center;cursor:pointer;font:inherit;color:var(--txt);transition:.2s}
+.gift:hover{border-color:var(--blue);transform:translateY(-3px)}
+.gift em{font-style:normal;font-size:2.2rem;display:block}
+.gift h3{font-size:1.25rem;margin:.4rem 0 .2rem}
+.gift small{color:var(--blue-d)}
+.modal{position:fixed;inset:0;background:rgba(30,40,46,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.modal.on{display:flex}
+.modal>div{background:var(--bg);border-radius:20px;padding:1.6rem;max-width:420px;width:100%;max-height:90vh;overflow:auto}
+.modal dl{margin:1rem 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.9rem}
+.modal dt{color:var(--head)}.modal dd{margin:0;word-break:break-all}
+.pix{background:var(--soft);border-radius:12px;padding:12px;word-break:break-all;font-size:.85rem;margin:.4rem 0 .8rem}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);background:var(--head);color:var(--bg);padding:10px 20px;border-radius:99px;font-size:.88rem;z-index:60;opacity:0;pointer-events:none;transition:.3s}
+.toast.on{opacity:1}
+footer{text-align:center;padding:2rem 1rem 3rem;font-family:var(--serif);font-size:1.2rem;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<nav>
+  <span class="logo">R &amp; J</span>
+  <a href="#inicio" data-r="inicio">Início</a>
+  <a href="#rsvp" data-r="rsvp">Presença</a>
+  <a href="#album" data-r="album">Álbum</a>
+  <a href="#presentes" data-r="presentes">Presentes</a>
+</nav>
+
+<main>
+<section id="inicio" class="hero">
+  <small>Vamos nos casar</small>
+  <h1>Raquel <i>&amp;</i> Jordan</h1>
+  <div class="date">16 de janeiro de 2027 · 17h30</div>
+  <div class="cd"><div><b id="cd-d">0</b><span>dias</span></div><div><b id="cd-h">0</b><span>horas</span></div><div><b id="cd-m">0</b><span>min</span></div><div><b id="cd-s">0</b><span>seg</span></div></div>
+  <div class="card">
+    <h3>Empório Paraíso</h3>
+    <p>Cambé · Paraná</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Emp%C3%B3rio+Para%C3%ADso+Camb%C3%A9">Ver no Google Maps</a>
+  </div>
+  <div class="notice">
+    <div class="card"><h3>Traje</h3><p>Traje esporte fino. Sugerimos tons terrosos, verde-sálvia, rosé ou terracota. Pedimos que evitem branco, off-white, azul e cinza, cores reservadas aos padrinhos e madrinhas.</p></div>
+    <div class="card"><h3>Recado importante</h3><p>A cerimônia começa pontualmente às 17h30. Pedimos que cheguem com antecedência.</p></div>
+  </div>
+  <p><a class="btn" href="#rsvp">Confirmar presença</a></p>
+</section>
+
+<section id="rsvp">
+  <h2>Confirme sua presença</h2>
+  <p class="sub">Será uma alegria ter você conosco. Preencha a lista de convidados para confirmar sua presença.</p>
+  <div class="card center"><h3>Lista de convidados</h3><p>Informe seu nome, e-mail e acompanhantes. São permitidos apenas cônjuges e filhos pequenos.</p><a class="btn" target="_blank" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSe3oQH2L0qagAJCaH8UBjZXFW1Rv_ppSZqvY2YNoPxcdMaJ-Q/viewform">Confirmar presença</a></div>
+</section>
+
+<section id="album">
+  <h2>Álbum dos convidados</h2>
+  <p class="sub">Compartilhe seus registros e ajude a contar a nossa história.</p>
+  <div class="card center"><h3>Álbum compartilhado no Google Fotos</h3><p>Veja as fotos dos noivos e adicione as suas ao mesmo álbum.</p><a class="btn" target="_blank" rel="noopener" href="https://photos.google.com/share/AF1QipNAcUpCqu7CQQgWuEnnFZ-9WV_DTVWegsLnXm65rFPUTGLxzcXkOHPHZCRP-ux12w?key=OW1JNENZQjhFbnE1NDRFOG5sNUpzZ0dUS2pySHJn">Abrir álbum</a></div>
+</section>
+
+<section id="presentes">
+  <h2>Presentes simbólicos</h2>
+  <p class="sub">Sua presença é o maior presente. Se desejar nos presentear, escolha uma experiência abaixo.</p>
+  <div class="gifts" id="gifts"></div>
+</section>
+</main>
+
+<footer>Raquel &amp; Jordan · 16.01.2027</footer>
+
+<div class="modal" id="modal"><div id="modal-in"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+(()=>{
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const PIX='a936ecaf-0a8a-47cb-9ed8-524579559359';
+const BANCO=[['Banco','Itaú Unibanco (341)'],['Agência','3893'],['Conta','93156-2']];
+
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),2400)}
+
+// Rotas por hash
+const routes=['inicio','rsvp','album','presentes'];
+function route(){
+  let r=location.hash.slice(1);if(!routes.includes(r))r='inicio';
+  $$('main section').forEach(s=>s.classList.toggle('on',s.id===r));
+  $$('nav a').forEach(a=>a.classList.toggle('on',a.dataset.r===r));
+  window.scrollTo(0,0);
+}
+addEventListener('hashchange',route);
+
+// Contagem regressiva
+const target=new Date(2027,0,16,17,30,0);
+function tick(){
+  let d=Math.max(0,target-new Date());
+  const days=Math.floor(d/864e5);d%=864e5;
+  const h=Math.floor(d/36e5);d%=36e5;
+  const m=Math.floor(d/6e4),s=Math.floor(d%6e4/1e3);
+  $('#cd-d').textContent=days;$('#cd-h').textContent=String(h).padStart(2,'0');
+  $('#cd-m').textContent=String(m).padStart(2,'0');$('#cd-s').textContent=String(s).padStart(2,'0');
+}
+setInterval(tick,1000);tick();
+
+// Presentes
+const gifts=[['✈️','Cota de lua de mel','R$ 100'],['🍷','Jantar romântico','R$ 150'],['💆','Dia de spa a dois','R$ 200'],
+  ['🏡','Cantinho do lar','R$ 120'],['🥐','Café na cama','R$ 60'],['🌅','Passeio ao pôr do sol','R$ 90']];
+$('#gifts').innerHTML=gifts.map((g,i)=>`<button class="gift" data-i="${i}"><em>${g[0]}</em><h3>${g[1]}</h3><small>Sugestão: ${g[2]}</small></button>`).join('');
+$('#gifts').onclick=e=>{
+  const b=e.target.closest('.gift');if(!b)return;
+  const g=gifts[b.dataset.i];
+  $('#modal-in').innerHTML=`<h3 style="font-size:1.7rem">${g[0]} ${esc(g[1])}</h3>
+  <p>Obrigado pelo carinho! Escolha o valor que desejar. Sugestão: ${g[2]}.</p>
+  <strong style="color:var(--head)">Chave PIX (aleatória)</strong><div class="pix" id="pixk">${esc(PIX)}</div>
+  <button class="btn" id="cp">Copiar chave PIX</button>
+  <dl>${BANCO.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+  <p style="font-size:.85rem">Confira o nome do recebedor no app do banco antes de confirmar.</p>
+  <button class="btn ghost" id="mx" style="width:100%">Fechar</button>`;
+  $('#modal').classList.add('on');
+  $('#mx').onclick=closeM;
+  $('#cp').onclick=async()=>{
+    try{await navigator.clipboard.writeText(PIX)}
+    catch(_){const r=document.createRange();r.selectNodeContents($('#pixk'));const s=getSelection();s.removeAllRanges();s.addRange(r);try{document.execCommand('copy')}catch(__){}}
+    toast('Chave PIX copiada! ✓');
+  };
+};
+const closeM=()=>$('#modal').classList.remove('on');
+$('#modal').onclick=e=>{if(e.target.id==='modal')closeM()};
+addEventListener('keydown',e=>{if(e.key==='Escape')closeM()});
+
+route();
+})();
+</script>
+</body>
+</html>
